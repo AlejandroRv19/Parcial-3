@@ -7,11 +7,11 @@ import  firebaseConfig from "../firebaseConfig"
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
 
-const saveProductInDB = async ( product: Product) => {
+const SaveRecipe = async ( product: recipe) => {
 
 
     try {
-         await addDoc(collection(db, "products"),  product
+         await addDoc(SaveRecipe(db, "recipe"),  recipe
         );
         
       } catch (e) {
@@ -24,4 +24,4 @@ const saveProductInDB = async ( product: Product) => {
 
 
 
-export default {saveProductInDB };
+export default {SaveRecipe };

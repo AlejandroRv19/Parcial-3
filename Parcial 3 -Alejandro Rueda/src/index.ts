@@ -14,7 +14,12 @@ class AppContainer extends HTMLElement {
     render() {
         const dasboard = this.ownerDocument.createElement('app-dasboard');
         this.shadowRoot?.appendChild(dasboard);
-    }
+
+        
+        const image = this.ownerDocument.createElement('app-image');
+        this.shadowRoot?.appendChild(image);
 }
+
+    }   
 
 customElements.define('app-container', AppContainer)

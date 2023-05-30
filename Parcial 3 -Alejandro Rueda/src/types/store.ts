@@ -1,16 +1,17 @@
+import { Recipt } from "./recipe";
 export type Observer = { render: () => void } & HTMLElement;
 
 export type AppState = {
-  something: {};
+  recipe: {};
 };
 
 export enum SomeActions {
-  "X" = "X",
+  "SAVE_RECIPE" = "SAVE_RECIPE",
 }
 
 export interface XAction {
-  action: SomeActions.X;
-  payload: Pick<AppState, "something">;
+  action: SomeActions.SaveRecipe;
+  payload: Pick<AppState, "SAVE_RECIPE">;
 }
 
-export type Actions = XAction;
+export type Actions = SaveRecipe;

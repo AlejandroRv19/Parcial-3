@@ -21,8 +21,8 @@ export default class dasboard extends HTMLElement {
         const form = this.ownerDocument.createElement('app-form');
         main_box.appendChild(form);
 
-        const Product = this.ownerDocument.createElement('app-product');
-        main_box.appendChild(Product);
+        const img = this.ownerDocument.createElement('app-img');
+        main_box.appendChild(img);
 
 
 

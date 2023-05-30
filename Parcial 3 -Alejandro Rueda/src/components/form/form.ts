@@ -1,10 +1,10 @@
 import { loadCss } from "../../utils/Main_styles";
-import formstyle from "./"
+import formstyle from "./formstyle.css"
 
 const userinputs: recipe = {
 
     name: "",
-    price:"0"
+    Ingredients:"0"
 };
 
 
@@ -39,7 +39,7 @@ export default class form extends HTMLElement {
 
         const label = this.ownerDocument.createElement('label');
         second_box.classList.add("label")
-        label.textContent = ("name")
+        label.textContent = ("name of recipe")
         second_box.appendChild(label);
 
         const name = this.ownerDocument.createElement('input');
@@ -52,21 +52,21 @@ export default class form extends HTMLElement {
 
         const label_2 = this.ownerDocument.createElement('label');
         second_box.classList.add("label_2")
-        label_2.textContent = ("price")
+        label_2.textContent = ("Ingredients")
         second_box.appendChild(label_2);
 
-        const price = this.ownerDocument.createElement('input');
-        price.classList.add("imput_2")
-        price.addEventListener("change", (e: any) =>{
-            userinputs.price = e.target.value
+        const Ingredients = this.ownerDocument.createElement('input');
+        Ingredients.classList.add("imput_2")
+        Ingredients.addEventListener("change", (e: any) =>{
+            userinputs.Ingredients = e.target.value
         })
-        second_box.appendChild(price);
+        second_box.appendChild(Ingredients);
 
         const button = this.ownerDocument.createElement('button');
         button.textContent = ("Send")
         button.addEventListener ("click", async () =>{
             console.log(userinputs);
-            dispatch( await saveProduct(userinputs))
+            dispatch( await saveRecipe(userinputs))
 
         });
         second_box.appendChild(button);
